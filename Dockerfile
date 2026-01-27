@@ -17,7 +17,11 @@ RUN pnpm i --frozen-lockfile
 COPY . .
 
 # 构建产物（需要已配置 adapter: node({mode:"standalone"}) + output:"server"）
-RUN pnpm build
+RUN --mount=type=secret,id=OAUTH_GITHUB_CLIENT_ID \
+    --mount=type=secret,id=OAUTH_GITHUB_CLIENT_SECRET \
+    export OAUTH_GITHUB_CLIENT_ID="$(cat /run/secrets/OAUTH_GITHUB_CLIENT_ID)" && \
+    export OAUTH_GITHUB_CLIENT_SECRET="$(cat /run/secrets/OAUTH_GITHUB_CLIENT_SECRET)" && \
+    pnpm build
 
 
 ########## runtime stage ##########
