@@ -1,6 +1,6 @@
 services:
   newbie-blog:
-    images: ghcr.io/newbierd/newbie-blog:latest
+    image: ghcr.io/newbierd/newbie-blog:latest
     container_name: newbie-blog
     env_file:
       - .env
