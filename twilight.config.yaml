@@ -260,7 +260,7 @@ profile:
             # 名字
             name: "Homepage"
             # 图标
-            icon: "fa6-brands:house"
+            icon: "fa6-solid:house"
             # 链接
             url: "https://nbdhy.newbie.ma"
 
