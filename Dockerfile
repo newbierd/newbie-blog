@@ -21,9 +21,7 @@ RUN --mount=type=secret,id=OAUTH_GITHUB_CLIENT_ID \
     --mount=type=secret,id=OAUTH_GITHUB_CLIENT_SECRET \
     export OAUTH_GITHUB_CLIENT_ID="$(cat /run/secrets/OAUTH_GITHUB_CLIENT_ID)" && \
     export OAUTH_GITHUB_CLIENT_SECRET="$(cat /run/secrets/OAUTH_GITHUB_CLIENT_SECRET)" && \
-    pnpm build && \
-    pnpm prune --prod
-
+    pnpm build
 
 ########## runtime stage ##########
 FROM node:20-alpine AS runtime
