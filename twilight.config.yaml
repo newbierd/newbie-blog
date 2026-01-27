@@ -151,7 +151,7 @@ site:
 # Umami统计配置
 umami:
     # 是否显示Umami统计
-    enabled: false
+    enabled: true
     # UmamiCloudAPI地址
     baseUrl: "https://api.umami.is"
     # API密钥 (可用环境变量覆盖)
@@ -188,7 +188,7 @@ navbar:
                     "Diary"
                 - # 二级导航链接 - 相册 (预设)
                     "Albums"
-                - # 二级导航链接 - 动画 (预设)
+                - # 二级导航链接 - 影视 (预设)
                     "Anime"
         - # 一级导航链接 - 好友 (预设)
             "Friends"
@@ -249,20 +249,20 @@ sidebar:
 # 资料配置
 profile:
     # 头像配置 (相对于 /public 目录)
-    avatar: "/assets/images/avatar.jpg"
+    avatar: "/assets/images/newbie.jpg"
     # 信息配置
-    name: "Twilight"
+    name: "Newbie"
     # 简介配置
-    bio: "Hi"
+    bio: "Welcome to Newbie Blog!"
     # 链接配置
     links:
         - # 链接示例
             # 名字
-            name: "GitHub"
+            name: "Homepage"
             # 图标
-            icon: "fa6-brands:github"
+            icon: "fa6-brands:house"
             # 链接
-            url: "https://github.com/Spr-Aachen/Twilight"
+            url: "https://nbdhy.newbie.ma"
 
 # 公告配置
 announcement:
