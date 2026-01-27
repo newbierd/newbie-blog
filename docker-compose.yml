@@ -1,8 +1,6 @@
 services:
   newbie-blog:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    images: ghcr.io/newbierd/newbie-blog:latest
     container_name: newbie-blog
     env_file:
       - .env
