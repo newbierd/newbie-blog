@@ -22,3 +22,4 @@ pnpm-debug.log*
 node_modules/
 dist/
 .astro/
+.pnpm-store/
