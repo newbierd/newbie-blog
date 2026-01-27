@@ -1,41 +1,40 @@
 ---
-import { Icon } from "astro-icon/components";
-
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
 import { formatDateToYYYYMMDD } from "@utils/date";
 import { getCategoryUrl, getTagUrl } from "@utils/url";
-import { umamiConfig } from '@/config';
-import { i18n } from "@i18n/translation";
-import I18nKey from "@i18n/i18nKey";
-
+import { Icon } from "astro-icon/components";
+import { umamiConfig } from "@/config";
 
 // 解析 umami
 const umamiEnabled = umamiConfig.enabled || false;
-const umamiWebsiteId = umamiConfig.scripts.match(/data-website-id="([^"]+)"/)?.[1] || "";
+const umamiWebsiteId =
+	umamiConfig.scripts.match(/data-website-id="([^"]+)"/)?.[1] || "";
 const umamiApiKey = umamiConfig.apiKey || "";
 const umamiBaseUrl = umamiConfig.baseUrl || "";
 
 export interface Props {
-    published: Date;
-    updated?: Date;
-    category?: string | null;
-    tags?: string[];
-    hideUpdateDate?: boolean;
-    hideTagsForMobile?: boolean;
-    isHome?: boolean;
-    className?: string;
-    slug?: string;
+	published: Date;
+	updated?: Date;
+	category?: string | null;
+	tags?: string[];
+	hideUpdateDate?: boolean;
+	hideTagsForMobile?: boolean;
+	isHome?: boolean;
+	className?: string;
+	slug?: string;
 }
 
 const {
-    published,
-    updated,
-    category,
-    tags,
-    hideUpdateDate,
-    hideTagsForMobile,
-    isHome,
-    className = "",
-    slug
+	published,
+	updated,
+	category,
+	tags,
+	hideUpdateDate,
+	hideTagsForMobile,
+	isHome,
+	className = "",
+	slug,
 } = Astro.props;
 ---
 

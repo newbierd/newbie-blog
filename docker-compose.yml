@@ -1,0 +1,11 @@
+services:
+  newbie-blog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: newbie-blog
+    env_file:
+      - .env
+    ports:
+      - "9000:4321"
+    restart: unless-stopped
